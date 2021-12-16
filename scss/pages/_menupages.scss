@@ -1,0 +1,81 @@
+.header {
+text-align: center;
+height: 4rem;
+margin-top: 0%;
+align-items: center;
+display: flex;
+flex-direction: row;
+justify-content: space-around;
+& a:first-child{
+position: absolute;
+left: 1rem;
+font-size: 10px;
+}
+h1{
+  font-family: 'Shrikhand', cursive;;
+}
+}
+
+.backimg{
+  background-size: cover;
+  width: 100%;
+  height:25rem;
+  margin-bottom: 1rem;
+  z-index: -4;
+}
+
+.menu{
+  margin-top: -4rem;
+  border-radius: 2rem 2rem 0 0;
+  background-color: #f6f6f6;
+  padding: 2rem 2rem 2rem .8rem;
+  z-index: 5;
+}
+.title{
+  @include center;
+  font-family: 'Shrikhand', cursive;
+  justify-content: space-between;
+}
+.foodcard {
+  @include center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 1em;
+  width: 22rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.123) 0px 0px 10px;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 1em;
+  height: 4.5rem;
+  h3, dd{
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-left: 0%;
+      margin-top: 0%;
+
+}
+
+.price{
+margin-top: 2.8rem;
+padding: 0 1em 1em 0;
+font-weight: bold;
+font-size: 16px;
+}
+dd{
+  font-size: 14px;
+  margin-top: -15px;
+  color: $darkergrey;
+}
+.checkbox{
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 70px;
+  @include flexcolumn;
+  color: white;
+}
+}

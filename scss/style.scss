@@ -1,9 +1,21 @@
-@import "globals";
-@import "header";
-@import "hero";
+@import "./utils/variables";
+@import "./utils/mixins";
+@import "./base/base";
+@import "./layouts/header";
+@import "./layouts/hero";
 @import "./components/buttons";
 @import "./components/stepbutton";
 @import "./components/restaucard";
-@import "footer";
-@import "restau";
-@import "fonctionnement";
+@import "./layouts/footer";
+@import "./layouts/restau";
+@import "./layouts/fonctionnement";
+@import "./pages/menupages";
+@import "./components/fav";
+
+
+
+
+
+
+
+

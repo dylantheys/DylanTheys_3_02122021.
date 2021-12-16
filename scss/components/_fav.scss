@@ -1,0 +1,31 @@
+.fav-btn{
+    @include center;
+    height: 3rem;
+    width: 3rem;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+      background-color: transparent;
+      border: transparent 0px solid;
+      right: 3rem;
+    
+    }
+  
+    .far.fa-heart , .fas.fa-heart{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+  
+        &.far.fa-heart.border{
+            color: $lightgrey;  
+        }
+        
+        &.fas.fa-heart.back{
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            background-image: linear-gradient(to top, $primary, $secondary);
+        }
+    }
