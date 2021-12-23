@@ -19,13 +19,19 @@
         font-size: 1.5rem;
   
         &.far.fa-heart.border{
-            color: $lightgrey;  
+            color: $darkergrey;  
+          
         }
-        
         &.fas.fa-heart.back{
             color: transparent;
             background-clip: text;
             -webkit-background-clip: text;
             background-image: linear-gradient(to top, $primary, $secondary);
+            opacity: 0;
+            &:hover{
+                opacity: 1;
+            }
+       
+            
         }
     }

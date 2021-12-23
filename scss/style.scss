@@ -1,16 +1,19 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/anim";
+@import "./utils/transitions";
 @import "./base/base";
-@import "./layouts/header";
-@import "./layouts/hero";
 @import "./components/buttons";
 @import "./components/stepbutton";
 @import "./components/restaucard";
+@import "./components/fav";
+@import "./layouts/header";
+@import "./layouts/hero";
 @import "./layouts/footer";
 @import "./layouts/restau";
 @import "./layouts/fonctionnement";
 @import "./pages/menupages";
-@import "./components/fav";
+
 
 
 

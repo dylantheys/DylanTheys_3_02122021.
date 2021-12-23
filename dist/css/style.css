@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap");
+@keyframes anim-dish {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -14,52 +25,6 @@ body {
   line-height: 1.3;
   margin: 0px;
   padding: 0px;
-}
-
-.topbar {
-  z-index: 2;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24);
-  text-align: center;
-}
-
-.topbar img {
-  max-width: 100;
-  width: 50%;
-  margin: 8% 0% 4% 0%;
-}
-
-.locationbar {
-  z-index: -10;
-  background-color: #ebebeb;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  font-weight: lighter;
-  height: 40px;
-  padding-left: 40px;
-}
-
-.locationbar .fas.fa-map-marker-alt {
-  margin-right: 15px;
-}
-
-.locationbar input {
-  border: none;
-  background-color: #ebebeb;
-}
-
-.locationbar input:focus {
-  outline: none;
-}
-
-section.hero {
-  background-color: #f7f7f7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 0 0 15% 0;
 }
 
 .btn-gradient {
@@ -146,11 +111,11 @@ section.hero {
 .card .new {
   position: absolute;
   right: 2rem;
-  height: 0.5rem;
-  width: 6rem;
-  margin-top: 1rem;
+  height: 0.2rem;
+  width: 5.8rem;
+  margin-top: 0.2rem;
   background-color: #99e2d0;
-  padding: 0em 1rem 2.8rem 1rem;
+  padding: 0em 1rem 3rem 1rem;
   color: #198066;
   border-radius: 0.3rem;
   font-size: 14px;
@@ -183,6 +148,90 @@ a {
   color: black;
 }
 
+.fav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  background-color: transparent;
+  border: transparent 0px solid;
+  right: 3rem;
+}
+
+.far.fa-heart, .fas.fa-heart {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.far.fa-heart.far.fa-heart.border, .fas.fa-heart.far.fa-heart.border {
+  color: #464646;
+}
+
+.far.fa-heart.fas.fa-heart.back, .fas.fa-heart.fas.fa-heart.back {
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  opacity: 0;
+}
+
+.far.fa-heart.fas.fa-heart.back:hover, .fas.fa-heart.fas.fa-heart.back:hover {
+  opacity: 1;
+}
+
+.topbar {
+  z-index: 2;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24);
+  text-align: center;
+}
+
+.topbar img {
+  max-width: 100;
+  width: 50%;
+  margin: 8% 0% 4% 0%;
+}
+
+.locationbar {
+  z-index: -10;
+  background-color: #ebebeb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: lighter;
+  height: 40px;
+  padding-left: 40px;
+}
+
+.locationbar .fas.fa-map-marker-alt {
+  margin-right: 15px;
+}
+
+.locationbar input {
+  border: none;
+  background-color: #ebebeb;
+}
+
+.locationbar input:focus {
+  outline: none;
+}
+
+section.hero {
+  background-color: #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 0 15% 0;
+}
+
 footer {
   background-color: #383434;
   color: white;
@@ -191,10 +240,12 @@ footer {
 
 footer img {
   width: 100px;
+  margin-left: 28px;
 }
 
 footer ul {
   list-style: none;
+  margin-left: auto;
 }
 
 footer ul li {
@@ -238,7 +289,7 @@ section.fonctions {
 }
 
 .header h1 {
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
 }
 
 .backimg {
@@ -249,20 +300,34 @@ section.fonctions {
   z-index: -4;
 }
 
+.bordertitle {
+  border-bottom: 3px solid #99E2D0;
+  padding: 0 0 0.2em 0;
+}
+
 .menu {
-  margin-top: -4rem;
-  border-radius: 2rem 2rem 0 0;
+  margin-top: -8rem;
+  position: relative;
+  border-radius: 2.5rem 2.5rem 0 0;
   background-color: #f6f6f6;
-  padding: 2rem 2rem 2rem .8rem;
+  padding: 2rem 1rem 2rem 0.8rem;
   z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu .btn-gradient {
+  margin: 2rem auto 2rem;
 }
 
 .title {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Shrikhand', cursive;
+  font-family: "Shrikhand", cursive;
   justify-content: space-between;
+  margin-top: auto;
 }
 
 .foodcard {
@@ -283,7 +348,8 @@ section.fonctions {
   height: 4.5rem;
 }
 
-.foodcard h3, .foodcard dd {
+.foodcard h3,
+.foodcard dd {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -314,37 +380,4 @@ section.fonctions {
   justify-content: center;
   align-items: center;
   color: white;
-}
-
-.fav-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 3rem;
-  width: 3rem;
-  padding: 0;
-  cursor: pointer;
-  position: absolute;
-  background-color: transparent;
-  border: transparent 0px solid;
-  right: 3rem;
-}
-
-.far.fa-heart, .fas.fa-heart {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-.far.fa-heart.far.fa-heart.border, .fas.fa-heart.far.fa-heart.border {
-  color: #ebebeb;
-}
-
-.far.fa-heart.fas.fa-heart.back, .fas.fa-heart.fas.fa-heart.back {
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
 }
