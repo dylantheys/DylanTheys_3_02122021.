@@ -1,0 +1,74 @@
+.foodcard {
+  @include center;
+  justify-content: space-between;
+  background: white;
+  border-radius: 1em;
+  width: 22rem;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.123) 0px 0px 10px;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 1em;
+  height: 4.5rem;
+
+  h3,
+  dd {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 0%;
+    margin-top: 0%;
+  }
+
+  .price {
+    margin-top: 2.8rem;
+    padding: 0 1em 1em 0;
+    font-weight: bold;
+    overflow: hidden;
+    font-size: 16px;
+  }
+  dd {
+    font-size: 14px;
+    margin-top: -15px;
+    color: $darkergrey;
+    overflow: hidden;
+  }
+  .checkbox {
+    position: absolute;
+    right: 0;
+    height: 140%;
+    width: 0px;
+    @include flexcolumn;
+    background-color: $tertiary;
+    color: #fff;
+    opacity: 0;
+    animation: Animateback 1s;
+    transition: 0.7s ease-in-out 0s;
+    transform: padding;
+    padding-right: 0rem;
+    i {
+      transform: rotate(-360deg);
+      transition: 0.7s ease-in-out 0s;
+    }
+  }
+  &:hover {
+    .checkbox {
+      animation: Animate 1s forwards;
+      -webkit-animation: Animate 1s forwards;
+      -moz-animation: Animate 1s forwards;
+      -o-animation: Animate 1s forwards;
+      opacity: 1;
+
+      i {
+        animation-fill-mode: forwards;
+
+        transform: rotate(360deg);
+        transition: 0.7s ease-in-out 0s;
+      }
+    }
+    padding-right: 4rem;
+    transition: 0.7s ease-in-out 0s;
+  }
+}
