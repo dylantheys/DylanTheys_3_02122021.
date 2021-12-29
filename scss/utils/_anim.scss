@@ -1,65 +1,67 @@
-@keyframes anim-dish{
-    0%{
-       transform:translateY(20px);
-       opacity: 0;
-    }
-    100%{
-       transform:translateY(0);
-       opacity: 1;
-    }
-}
 
 @keyframes Animate {
-   from {
-   width: 0px;
+  from {
+    width: 0px;
+  }
+  to {
+    width: 70px;
+  }
 }
-to {
-   width: 70px}
-}@-webkit-keyframes Animate {
-   from {
-   width: 0px;
+@-webkit-keyframes Animate {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 70px;
+  }
 }
-to {
-   width: 70px}
-}@-moz-keyframes Animate {
-   from {
-   width: 0px;
+@-moz-keyframes Animate {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 70px;
+  }
 }
-to {
-   width: 70px}
-}@-o-keyframes Animate {
-   from {
-   width: 0px;
+@-o-keyframes Animate {
+  from {
+    width: 0px;
+  }
+  to {
+    width: 70px;
+  }
 }
-to {
-   width: 70px}
-}
-
 
 @keyframes Animateback {
-   
-   from {
-   width: 70px;
+  from {
+    width: 70px;
+  }
+  to {
+    width: 0px;
+  }
 }
-to {
-   width: 0px}
-}@-webkit-keyframes Animateback {
-   from {
-   width: 70px;
+@-webkit-keyframes Animateback {
+  from {
+    width: 70px;
+  }
+  to {
+    width: 0px;
+  }
 }
-to {
-   width: 0px}
-}@-moz-keyframes Animateback {
-   from {
-   width: 70px;
+@-moz-keyframes Animateback {
+  from {
+    width: 70px;
+  }
+  to {
+    width: 0px;
+  }
 }
-to {
-   width: 0px}
-}@-o-keyframes Animateback {
-   from {
-   width: 70px;
+@-o-keyframes Animateback {
+  from {
+    width: 70px;
+  }
+  to {
+    width: 0px;
+  }
 }
-to {
-   width: 0px}
-   
-}
+

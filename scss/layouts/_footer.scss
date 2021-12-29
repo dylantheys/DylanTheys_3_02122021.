@@ -1,17 +1,20 @@
-footer{
-    background-color: rgb(56, 52, 52);
-    color: white;
-    padding: 20px;
-    img{
-        width: 100px;
-        margin-left: 28px;
+footer {
+  background-color: rgb(56, 52, 52);
+  color: white;
+  padding: 1em;
+  img {
+    width: 100px;
+    margin-left: 2.5em;
+  }
+  ul {
+    list-style: none;
+    margin-left: 0px;
+    a{
+     text-decoration: none;
+     color: white;
     }
-    ul{
-list-style: none;
-margin-left: auto;
-li{
-    margin-bottom: 8px;
-}
+    li {
+      margin-bottom: 8px;
     }
-
+  }
 }

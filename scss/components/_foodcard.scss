@@ -10,28 +10,38 @@
   position: relative;
   white-space: nowrap;
   overflow: hidden;
+  animation: Animateback 1s;
+  transition: 0.7s ease-in-out 0s;
   padding: 1em;
   height: 4.5rem;
+
 
   h3,
   dd {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    margin-left: 0%;
+    margin-left: 0px;
     margin-top: 0%;
+    padding: 0 0em 0 0em;
   }
-
+  .desc {
+    white-space: nowrap;
+    overflow: hidden;
+    margin-left: 0.1px;
+  }
   .price {
     margin-top: 2.8rem;
-    padding: 0 1em 1em 0;
+    padding: 0 1em 1em 0em;
     font-weight: bold;
     overflow: hidden;
     font-size: 16px;
+    margin: auto 0 0 0;
+    transform: translateX(0px);
   }
   dd {
     font-size: 14px;
-    margin-top: -15px;
+    margin-top: -18px;
     color: $darkergrey;
     overflow: hidden;
   }
@@ -47,7 +57,7 @@
     animation: Animateback 1s;
     transition: 0.7s ease-in-out 0s;
     transform: padding;
-    padding-right: 0rem;
+
     i {
       transform: rotate(-360deg);
       transition: 0.7s ease-in-out 0s;

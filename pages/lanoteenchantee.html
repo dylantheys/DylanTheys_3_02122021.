@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>La note enchantée</title>
+    <link rel="stylesheet" href="../dist/css/style.css" />
   </head>
   <body>
     <link
@@ -13,52 +14,73 @@
     />
     <script src="https://use.fontawesome.com/620e811c9d.js"></script>
 
-    <header>
-      <a href=""><i class="fas fa-arrow-left"></i></a>
-      <img src="./assets/ohmyfood.png" alt="" />
+    <header class="header">
+      <a href="../index.html">
+        <i class="fas fa-arrow-left fa-2x arrow"></i>
+      </a>
+      <h1 class="headerlogo">ohmyfood</h1>
     </header>
 
-    <img src="../assets/ohmyfood.png" alt="" class="hero" />
+    <img class="backimg" src="../assets/restaurants/B.jpg" alt=""/>
 
     <section class="menu">
       <div class="title">
-        <h2>La note enchantée</h2>
-        <i class="far fa-heart"></i>
-        <i class="fas fa-heart"></i>
+        <h2>La palette du goût</h2>
+        <div class="fav-btn">
+          <i class="fa-x2 far fa-heart border"></i>
+          <i class="fa-x2 fas fa-heart back"></i>
+        </div>
       </div>
       <div class="entree">
-        <p>ENTRÉES</p>
+        <p><span class="bordertitle">ENTR</span>ÉES</p>
         <div class="foodlist">
+
           <div class="foodcard">
-            <p>Ravioles de foie gras</p>
-            <p>Accompagnés de leur crème à la truffe</p>
-            <p>25€</p>
+            <div class="desc">
+              <dt><h3>Ravioles de foie gras</h3></dt>
+              <dd>Accompagnés de leur crème à la truffe</dd>
+            </div>
+            <div class="price">
+              <p>25€</p>
+            </div>
+            <div class="checkbox">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+
+        <div class="foodcard">
+            <div class="desc">
+              <dt><h3>Caviar osciètre</h3></dt>
+              <dd>Sur blini à la farine de blé noir</dd>
+            </div>
+            <div class="price">
+              <p>35€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
           </div>
 
           <div class="foodcard">
-            <p>Caviar osciètre</p>
-            <p>Sur blini à la farine de blé noir</p>
-            <p>35€</p>
-            <div class="checkbox">
-              <i class="fas fa-check-circle"></i>
+            <div class="desc">
+              <dt><h3>Homard et espuma de potiron</h3></dt>
+              <dd>Mariné aux zestes d'orange</dd>
             </div>
-          </div>
-
-          <div class="foodcard">
-            <p>Homard et espuma de potiron</p>
-            <p>Mariné aux zestes d'orange</p>
-            <p>20€</p>
+            <div class="price">
+              <p>20€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
           </div>
           <div class="foodcard">
-            <p>Foie gras de canard cuit entier</p>
-            <p>Confiture de figue et pain toasté</p>
-            <p>35€</p>
+            <div class="desc">
+              <dt><h3>Foie gras de canard cuit entier</h3></dt>
+              <dd>Confiture de figue et pain toasté</dd>
+            </div>
+            <div class="price">
+              <p>35€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
@@ -67,30 +89,42 @@
       </div>
 
       <div class="plats">
-        <p>PLATS</p>
+        <p><span class="bordertitle"> PLAT</span>S</p>
         <div class="foodlist">
+
           <div class="foodcard">
-            <p>Noix de coquilles Saint-Jacques</p>
-            <p>Sur lit de purée de celeri-rave</p>
-            <p>40€</p>
+            <div class="desc">
+              <dt><h3>Noix de coquilles Saint-Jacques</h3></dt>
+              <dd>Sur lit de purée de céleri-rave</dd>
+            </div>
+            <div class="price">
+              <p>40€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
           </div>
 
           <div class="foodcard">
-            <p>Langoustine poêlée</p>
-            <p>Purée de patate douce</p>
-            <p>35€</p>
+            <div class="desc">
+              <dt><h3>Langoustine poêlée</h3></dt>
+              <dd>Purée de patate douce</dd>
+            </div>
+            <div class="price">
+              <p>35€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
           </div>
-
           <div class="foodcard">
-            <p>Mijoté de queue de boeuf</p>
-            <p>Et riz sauvage aux zestes de citron</p>
-            <p>44€</p>
+            <div class="desc">
+              <dt><h3>Mijoté de queue de boeuf</h3></dt>
+              <dd>Et riz sauvage aux zestes de citron</dd>
+            </div>
+            <div class="price">
+              <p>44€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
@@ -99,46 +133,59 @@
       </div>
 
       <div class="plats">
-        <p>DESSERTS</p>
+        <p><span class="bordertitle">DESSE</span>RTS</p>
         <div class="foodlist">
           <div class="foodcard">
-            <p>Macaron noiette et chocolat</p>
-            <p>Glace au caramel brun et sel de guérande</p>
-            <p>18€</p>
+            <div class="desc">
+              <dt><h3>Macaron noisette et chocolat</h3></dt>
+              <dd>Glace au caramel brun et sel de guérande</dd>
+            </div>
+            <div class="price">
+              <p>18€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
           </div>
 
           <div class="foodcard">
-            <p>Baba au rhum revisité</p>
-            <p>Avec son coulis de citron</p>
-            <p>22€</p>
+            <div class="desc">
+              <dt><h3>Baba au rhum revisité</h3></dt>
+              <dd>Avec son coulis de citron</dd>
+            </div>
+            <div class="price">
+              <p>22€</p>
+            </div>
+            <div class="checkbox">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+          <div class="foodcard">
+            <div class="desc">
+              <dt><h3>Tarte au citron meringuée</h3></dt>
+              <dd>Déstructurée</dd>
+            </div>
+            <div class="price">
+              <p>23€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
           </div>
 
-          <div class="foodcard">
-            <p>Tarte au citron meringuée</p>
-            <p>Déstructurée</p>
-            <p>23€</p>
-            <div class="checkbox">
-              <i class="fas fa-check-circle"></i>
-            </div>
-          </div>
         </div>
       </div>
       <button class="btn-gradient">Commander</button>
     </section>
     <footer>
-      <img src="./assets/ohmyfood.svg" alt="footerlogo" />
+      <img src="../assets/ohmyfood.svg" alt="footerlogo" />
       <nav>
         <ul>
           <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
           <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
           <li>Mentions légales</li>
-          <li>Contact</li>
+          <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
+
         </ul>
       </nav>
     </footer>

@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Le délice des sens</title>
+    <link rel="stylesheet" href="../dist/css/style.css" />
   </head>
   <body>
     <link
@@ -13,44 +14,61 @@
     />
     <script src="https://use.fontawesome.com/620e811c9d.js"></script>
 
-    <header>
-      <a href=""><i class="fas fa-arrow-left"></i></a>
-      <img src="./assets/ohmyfood.png" alt="" />
+    <header class="header">
+      <a href="../index.html">
+        <i class="fas fa-arrow-left fa-2x arrow"></i>
+      </a>
+      <h1 class="headerlogo">ohmyfood</h1>
     </header>
 
-    <img src="../assets/ohmyfood.png" alt="" class="hero" />
+    <img class="backimg" src="../assets/restaurants/C.jpg" alt=""/>
 
     <section class="menu">
       <div class="title">
         <h2>Le délice des sens</h2>
-        <i class="far fa-heart"></i>
-        <i class="fas fa-heart"></i>
+        <div class="fav-btn">
+          <i class="fa-x2 far fa-heart border"></i>
+          <i class="fa-x2 fas fa-heart back"></i>
+        </div>
       </div>
       <div class="entree">
-        <p>ENTRÉES</p>
+        <p><span class="bordertitle">ENTR</span>ÉES</p>
         <div class="foodlist">
+
           <div class="foodcard">
-            <p>Tartare de thon</p>
-            <p>Assaisonné au yuzu</p>
-            <p>25€</p>
+            <div class="desc">
+              <dt><h3>Tartare de thon</h3></dt>
+              <dd>Assaisonné au Yuzu</dd>
+            </div>
+            <div class="price">
+              <p>25€</p>
+            </div>
+            <div class="checkbox">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+
+        <div class="foodcard">
+            <div class="desc">
+              <dt><h3>Bouchée de homard croustillant</h3></dt>
+              <dd>Et sa farandole de petits légumes</dd>
+            </div>
+            <div class="price">
+              <p>35€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
           </div>
 
           <div class="foodcard">
-            <p>Bouchée de homard croustillant</p>
-            <p>Et sa farandole de petits légumes</p>
-            <p>35€</p>
-            <div class="checkbox">
-              <i class="fas fa-check-circle"></i>
+            <div class="desc">
+              <dt><h3>Velouté de cèpes</h3></dt>
+              <dd>Aux truffes</dd>
             </div>
-          </div>
-
-          <div class="foodcard">
-            <p>Velouté de cèpes</p>
-            <p>Aux truffes</p>
-            <p>20€</p>
+            <div class="price">
+              <p>20€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
@@ -59,30 +77,42 @@
       </div>
 
       <div class="plats">
-        <p>PLATS</p>
+        <p><span class="bordertitle"> PLAT</span>S</p>
         <div class="foodlist">
+
           <div class="foodcard">
-            <p>Poulet rôti aux herbes de provence</p>
-            <p>Et sa crème de truffe</p>
-            <p>40€</p>
+            <div class="desc">
+              <dt><h3>Poulet rôti aux herbes de provence</h3></dt>
+              <dd>Et sa crème de truffe</dd>
+            </div>
+            <div class="price">
+              <p>40€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
           </div>
 
           <div class="foodcard">
-            <p>Langouste rôtie</p>
-            <p>Et ses légumes de saison</p>
-            <p>35€</p>
+            <div class="desc">
+              <dt><h3>Langouste rôtie</h3></dt>
+              <dd>Et ses légumes de saison</dd>
+            </div>
+            <div class="price">
+              <p>35€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
           </div>
-
           <div class="foodcard">
-            <p>Côte de boeuf Angus</p>
-            <p>Et sa purée de panais</p>
-            <p>44€</p>
+            <div class="desc">
+              <dt><h3>Côte de boeuf Angus</h3></dt>
+              <dd>Et sa purée de panais</dd>
+            </div>
+            <div class="price">
+              <p>44€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
@@ -91,47 +121,59 @@
       </div>
 
       <div class="plats">
-        <p>DESSERTS</p>
+        <p><span class="bordertitle">DESSE</span>RTS</p>
         <div class="foodlist">
           <div class="foodcard">
-            <p>Farandole de desserts</p>
-            <p>Du chef</p>
-            <p>18€</p>
+            <div class="desc">
+              <dt><h3>Farandole de desserts</h3></dt>
+              <dd>Du chef</dd>
+            </div>
+            <div class="price">
+              <p>18€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
           </div>
 
           <div class="foodcard">
-            <p>Crème brûlée</p>
-            <p>Revisitée</p>
-            <p>22€</p>
+            <div class="desc">
+              <dt><h3>Crème brûlée</h3></dt>
+              <dd>Revisitée</dd>
+            </div>
+            <div class="price">
+              <p>22€</p>
+            </div>
+            <div class="checkbox">
+              <i class="fas fa-check-circle"></i>
+            </div>
+          </div>
+          <div class="foodcard">
+            <div class="desc">
+              <dt><h3>Tiramisu</h3></dt>
+              <dd>À la noisette</dd>
+            </div>
+            <div class="price">
+              <p>23€</p>
+            </div>
             <div class="checkbox">
               <i class="fas fa-check-circle"></i>
             </div>
           </div>
 
-          <div class="foodcard">
-            <p>Tiramisu</p>
-            <p>À la noisette</p>
-            <p>23€</p>
-            <div class="checkbox">
-              <i class="fas fa-check-circle"></i>
-            </div>
-          </div>
-          
         </div>
       </div>
       <button class="btn-gradient">Commander</button>
     </section>
     <footer>
-      <img src="./assets/ohmyfood.svg" alt="footerlogo" />
+      <img src="../assets/ohmyfood.svg" alt="footerlogo" />
       <nav>
         <ul>
           <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
           <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
           <li>Mentions légales</li>
-          <li>Contact</li>
+          <li><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
+
         </ul>
       </nav>
     </footer>
