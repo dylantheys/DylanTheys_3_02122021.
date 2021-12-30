@@ -2,6 +2,10 @@ section.fonctions {
   display: flex;
   flex-direction: column;
   padding: 0 0 1% 0;
-  
+  @media only screen and (min-width:768px) {
+    flex-direction: column;
+padding-top: auto;
+
+}
 }
 

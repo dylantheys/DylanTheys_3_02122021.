@@ -60,6 +60,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -71,6 +72,9 @@ body {
   line-height: 1.3;
   margin: 0px;
   padding: 0px;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .btn-gradient {
@@ -92,6 +96,7 @@ body {
   justify-content: space-between;
   background: white;
   border-radius: 1em;
+  cursor: pointer;
   width: 22rem;
   overflow: hidden;
   margin-bottom: 1rem;
@@ -201,6 +206,13 @@ body {
   gap: 3rem;
 }
 
+@media only screen and (min-width: 768px) {
+  .fonctions .function_btn {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+}
+
 .fonctions .function_btn .step_card {
   border-radius: 20px;
   display: flex;
@@ -242,12 +254,11 @@ body {
 }
 
 .card {
-  background-color: white;
-  width: 95%;
-  height: 220px;
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
-  border-radius: 20px;
+  border-radius: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: block;
   box-shadow: rgba(0, 0, 0, 0.123) 0px 0px 10px;
   border: #c6d6f0 solid 0px;
   text-decoration: none;
@@ -255,24 +266,22 @@ body {
 }
 
 .card .new {
+  padding: 0.5rem;
+  border-radius: 0.125rem;
   position: absolute;
   right: 2rem;
-  height: 0.2rem;
-  width: 5.8rem;
-  margin-top: 0.2rem;
   background-color: #99e2d0;
-  padding: 0em 1rem 3rem 1rem;
+  margin-top: 10px;
   color: #198066;
-  border-radius: 0.3rem;
   font-size: 14px;
 }
 
 .card img {
-  max-width: 100%;
-  max-height: 70%;
-  border-radius: 20px 20px 0 0;
-  width: 600px;
-  height: 200px;
+  height: 12rem;
+  width: 100%;
+  border: transparent solid 0px;
+  border-radius: 1rem 1rem 0 0;
+  box-shadow: none;
   object-fit: cover;
 }
 
@@ -284,9 +293,11 @@ body {
   padding-right: 6rem;
 }
 
-.card .description h3, .card .description p {
+.card .description h3,
+.card .description p {
   margin: 0;
   padding: 0.5rem 0.5rem 0rem 1.5rem;
+  margin-bottom: 0.25rem;
 }
 
 a {
@@ -308,7 +319,8 @@ a {
   right: 3rem;
 }
 
-.far.fa-heart, .fas.fa-heart {
+.far.fa-heart,
+.fas.fa-heart {
   position: absolute;
   display: flex;
   align-items: center;
@@ -316,11 +328,13 @@ a {
   font-size: 1.5rem;
 }
 
-.far.fa-heart.far.fa-heart.border, .fas.fa-heart.far.fa-heart.border {
+.far.fa-heart.far.fa-heart.border,
+.fas.fa-heart.far.fa-heart.border {
   color: #464646;
 }
 
-.far.fa-heart.fas.fa-heart.back, .fas.fa-heart.fas.fa-heart.back {
+.far.fa-heart.fas.fa-heart.back,
+.fas.fa-heart.fas.fa-heart.back {
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -328,24 +342,38 @@ a {
   opacity: 0;
 }
 
-.far.fa-heart.fas.fa-heart.back:hover, .fas.fa-heart.fas.fa-heart.back:hover {
+.far.fa-heart.fas.fa-heart.back:hover,
+.fas.fa-heart.fas.fa-heart.back:hover {
   opacity: 1;
 }
 
 .topbar {
-  z-index: 2;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24);
+  z-index: 1000;
+  position: relative;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.24);
   text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .topbar {
+    height: 6rem;
+  }
 }
 
 .topbar img {
   max-width: 100;
   width: 50%;
   margin: 8% 0% 4% 0%;
+  margin-top: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .topbar img {
+    width: 20%;
+  }
 }
 
 .locationbar {
-  z-index: -10;
   background-color: #ebebeb;
   display: flex;
   justify-content: center;
@@ -365,8 +393,20 @@ a {
   background-color: #ebebeb;
 }
 
+@media only screen and (min-width: 768px) {
+  .locationbar input {
+    font-size: 20px;
+  }
+}
+
 .locationbar input:focus {
   outline: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .locationbar {
+    height: 4rem;
+  }
 }
 
 section.hero {
@@ -376,6 +416,12 @@ section.hero {
   align-items: center;
   text-align: center;
   padding: 0 0 15% 0;
+}
+
+@media only screen and (min-width: 768px) {
+  section.hero {
+    padding: 0 15% 5% 15%;
+  }
 }
 
 footer {
@@ -405,8 +451,6 @@ footer ul li {
 
 section.restaurants {
   background-color: #f7f7f7;
-  display: flex;
-  flex-direction: column;
 }
 
 section.restaurants h2 {
@@ -414,13 +458,30 @@ section.restaurants h2 {
 }
 
 section.restaurants .restaurants_container {
-  margin: 0 0rem 0 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 2rem;
+  row-gap: 1rem;
+  padding: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  section.restaurants .restaurants_container {
+    display: flex;
+  }
 }
 
 section.fonctions {
   display: flex;
   flex-direction: column;
   padding: 0 0 1% 0;
+}
+
+@media only screen and (min-width: 768px) {
+  section.fonctions {
+    flex-direction: column;
+    padding-top: auto;
+  }
 }
 
 .header {
@@ -451,6 +512,16 @@ section.fonctions {
   z-index: -4;
 }
 
+@media only screen and (min-width: 768px) {
+  .backimg {
+    max-width: 100%;
+    max-height: 32rem;
+    height: 30rem;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 .bordertitle {
   border-bottom: 3px solid #99E2D0;
   padding: 0 0 0.2em 0;
@@ -463,13 +534,29 @@ section.fonctions {
   background-color: #f6f6f6;
   padding: 2rem 1rem 2rem 0.8rem;
   z-index: 5;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu {
+    width: 95%;
+    padding: auto;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.1);
+    margin-top: -10rem;
+  }
 }
 
 .menu .btn-gradient {
   margin: 2rem auto 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .menu .btn-gradient {
+    margin: auto;
+    width: 20rem;
+    margin-left: 35%;
+  }
 }
 
 .title {
@@ -479,4 +566,19 @@ section.fonctions {
   font-family: "Shrikhand", cursive;
   justify-content: space-between;
   margin-top: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .menus {
+    flex-direction: row;
+    display: flex;
+    margin-left: 8%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .entree, .plats, .dessert {
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+  }
 }
