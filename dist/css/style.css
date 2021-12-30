@@ -57,6 +57,22 @@
   animation-delay: 1s;
 }
 
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loaderback {
+  100% {
+    opacity: 0;
+    z-index: -100000;
+  }
+}
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -75,6 +91,35 @@ body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   scroll-behavior: smooth;
+}
+
+.spinningloader {
+  display: inline-block;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: loaderback 1.2s linear 2s forwards;
+}
+
+.spinningloader:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #9356DC transparent #FF79DA transparent;
+  animation: loader 1.2s linear 0.01s infinite forwards;
 }
 
 .btn-gradient {
@@ -538,7 +583,7 @@ section.fonctions {
 
 @media only screen and (min-width: 768px) {
   .menu {
-    width: 95%;
+    max-width: 95%;
     padding: auto;
     margin-left: auto;
     margin-right: auto;
@@ -549,6 +594,9 @@ section.fonctions {
 
 .menu .btn-gradient {
   margin: 2rem auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -572,7 +620,7 @@ section.fonctions {
   .menus {
     flex-direction: row;
     display: flex;
-    margin-left: 8%;
+    justify-content: center;
   }
 }
 

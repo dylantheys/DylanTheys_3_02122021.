@@ -1,0 +1,29 @@
+.spinningloader {
+  display: inline-block;
+  animation-delay: 1.75s;
+  animation-fill-mode: both;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  animation: loaderback 1.2s linear 2s forwards;
+
+}
+
+.spinningloader:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: $primary transparent $secondary transparent;
+  animation: loader 1.2s linear 0.01s infinite forwards;
+}
