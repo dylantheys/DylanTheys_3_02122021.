@@ -498,6 +498,12 @@ section.restaurants {
   background-color: #f7f7f7;
 }
 
+@media only screen and (min-width: 768px) {
+  section.restaurants {
+    height: 60vh;
+  }
+}
+
 section.restaurants h2 {
   margin-left: 1rem;
 }
@@ -583,7 +589,7 @@ section.fonctions {
 
 @media only screen and (min-width: 768px) {
   .menu {
-    max-width: 95%;
+    maxgit-width: 95%;
     padding: auto;
     margin-left: auto;
     margin-right: auto;
