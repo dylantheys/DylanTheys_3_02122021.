@@ -23,14 +23,12 @@
   margin-bottom: 1rem;
   z-index: -4;
 
-  @media only screen and (min-width:768px) {
+  @media only screen and (min-width: 768px) {
     max-width: 100%;
     max-height: 32rem;
     height: 30rem;
     width: 100%;
     object-fit: cover;
-
-  
   }
 }
 
@@ -38,7 +36,7 @@
 
 .bordertitle {
   border-bottom: 3px solid $tertiary;
-                        padding: 0 0 0.2em 0;
+  padding: 0 0 0.2em 0;
 }
 
 //--------------------------------- MENU CARD ---------------------------------//
@@ -49,31 +47,31 @@
   background-color: #f6f6f6;
   padding: 2rem 1rem 2rem 0.8rem;
   z-index: 5;
- 
-@media only screen and (min-width:768px) {
-  maxgit-width: 95%;
-  padding: auto;
-  margin-left: auto;
-  margin-right: auto;
-  @include box-shadow;
-  margin-top: -10rem;
 
+  @media only screen and (min-width: 768px) {
+    width: 95%;
 
-}
- 
+    margin-left: auto;
+    margin-right: auto;
+    @include box-shadow;
+    margin-top: -10rem;
+  }
 
-
-  .btn-gradient{
-    margin: 2rem auto 2rem;
+  .btn-gradient {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: center;
-    @media only screen and (min-width:768px) {
+    align-items: center;
+    margin: auto;
+    @media only screen and (min-width: 768px) {
       margin: auto;
       width: 20rem;
-      margin-left: 35%;
-    
-      
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
     }
   }
 }
@@ -81,21 +79,33 @@
   @include center;
   font-family: "Shrikhand", cursive;
   justify-content: space-between;
-  margin-top : auto;
+  margin-top: auto;
 }
-.menus{
-@media only screen and (min-width:768px) {
-  flex-direction: row;
-  display: flex;
-  justify-content: center;
-
-  
+.menus {
+  @media only screen and (min-width: 768px) {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1370px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
 }
+
+.entree,
+.plats,
+.dessert {
+  @media only screen and (min-width: 768px) {
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    width: 80%;
+    @media only screen and (min-width: 768px) and (max-width: 1370px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
 }
-
-.entree ,.plats, .dessert{
-  @media only screen and (min-width:768px) {
-  margin-left: 0.5rem;
-  margin-right: 1rem;
-
-}}

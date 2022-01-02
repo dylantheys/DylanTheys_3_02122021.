@@ -29,14 +29,6 @@
   }
 }
 
-/* Firefox < 16 */
-
-/* Safari, Chrome and Opera > 12.1 */
-
-/* Internet Explorer */
-
-/* Opera < 12.1 */
-
 .foodcard:nth-child(1n) {
   animation-delay: 0.2s;
 }
@@ -51,10 +43,6 @@
 
 .foodcard:nth-child(4n) {
   animation-delay: 0.8s;
-}
-
-.foodcard:nth-child(5n) {
-  animation-delay: 1s;
 }
 
 @keyframes loader {
@@ -76,10 +64,11 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -89,8 +78,7 @@ body {
   margin: 0px;
   padding: 0px;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
 }
 
 .spinningloader {
@@ -142,7 +130,7 @@ body {
   background: white;
   border-radius: 1em;
   cursor: pointer;
-  width: 22rem;
+  width: 97%;
   overflow: hidden;
   margin-bottom: 1rem;
   box-shadow: rgba(0, 0, 0, 0.123) 0px 0px 10px;
@@ -159,6 +147,12 @@ body {
   /* Internet Explorer */
   /* Opera < 12.1 */
   animation: fadein 1s forwards;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1370px) {
+  .foodcard {
+    width: 90%;
+  }
 }
 
 .foodcard h3,
@@ -208,7 +202,6 @@ body {
   opacity: 0;
   animation: Animateback 1s;
   transition: 0.7s ease-in-out 0s;
-  transform: padding;
 }
 
 .foodcard .checkbox i {
@@ -308,6 +301,7 @@ body {
   border: #c6d6f0 solid 0px;
   text-decoration: none;
   color: black;
+  margin: 1rem;
 }
 
 .card .new {
@@ -333,7 +327,6 @@ body {
 .card .description {
   display: flex;
   justify-content: space-between;
-  align-items: left;
   flex-direction: column;
   padding-right: 6rem;
 }
@@ -406,9 +399,9 @@ a {
 }
 
 .topbar img {
-  max-width: 100;
+  max-width: 100%;
   width: 50%;
-  margin: 8% 0% 4% 0%;
+  margin: 8% 0 4% 0;
   margin-top: 2rem;
 }
 
@@ -500,7 +493,7 @@ section.restaurants {
 
 @media only screen and (min-width: 768px) {
   section.restaurants {
-    height: 60vh;
+    padding-top: 1rem;
   }
 }
 
@@ -509,16 +502,23 @@ section.restaurants h2 {
 }
 
 section.restaurants .restaurants_container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  column-gap: 2rem;
-  row-gap: 1rem;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (min-width: 768px) {
   section.restaurants .restaurants_container {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1370px) {
+  section.restaurants .restaurants_container {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -531,7 +531,6 @@ section.fonctions {
 @media only screen and (min-width: 768px) {
   section.fonctions {
     flex-direction: column;
-    padding-top: auto;
   }
 }
 
@@ -589,8 +588,7 @@ section.fonctions {
 
 @media only screen and (min-width: 768px) {
   .menu {
-    maxgit-width: 95%;
-    padding: auto;
+    width: 95%;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.1);
@@ -599,17 +597,23 @@ section.fonctions {
 }
 
 .menu .btn-gradient {
-  margin: 2rem auto 2rem;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 @media only screen and (min-width: 768px) {
   .menu .btn-gradient {
     margin: auto;
     width: 20rem;
-    margin-left: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -630,9 +634,31 @@ section.fonctions {
   }
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1370px) {
+  .menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+}
+
 @media only screen and (min-width: 768px) {
-  .entree, .plats, .dessert {
+  .entree,
+  .plats,
+  .dessert {
     margin-left: 0.5rem;
     margin-right: 1rem;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1370px) {
+  .entree,
+  .plats,
+  .dessert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
