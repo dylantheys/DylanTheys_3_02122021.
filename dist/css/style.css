@@ -48,10 +48,11 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -61,8 +62,7 @@ body {
   margin: 0px;
   padding: 0px;
   margin: 0;
-  font-family: 'Roboto', sans-serif;
-  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
 }
 
 .btn-gradient {
@@ -104,7 +104,7 @@ body {
   animation: fadein 1s forwards;
 }
 
-@media only screen and (min-width: 768px) and (max-device-width: 1370px) {
+@media only screen and (min-width: 768px) and (max-width: 1370px) {
   .foodcard {
     width: 90%;
   }
@@ -157,7 +157,6 @@ body {
   opacity: 0;
   animation: Animateback 1s;
   transition: 0.7s ease-in-out 0s;
-  transform: padding;
 }
 
 .foodcard .checkbox i {
@@ -283,7 +282,6 @@ body {
 .card .description {
   display: flex;
   justify-content: space-between;
-  align-items: left;
   flex-direction: column;
   padding-right: 6rem;
 }
@@ -356,9 +354,9 @@ a {
 }
 
 .topbar img {
-  max-width: 100;
+  max-width: 100%;
   width: 50%;
-  margin: 8% 0% 4% 0%;
+  margin: 8% 0 4% 0;
   margin-top: 2rem;
 }
 
@@ -472,7 +470,7 @@ section.restaurants .restaurants_container {
   }
 }
 
-@media only screen and (min-width: 768px) and (max-device-width: 1370px) {
+@media only screen and (min-width: 768px) and (max-width: 1370px) {
   section.restaurants .restaurants_container {
     display: flex;
     flex-direction: column;
@@ -488,7 +486,6 @@ section.fonctions {
 @media only screen and (min-width: 768px) {
   section.fonctions {
     flex-direction: column;
-    padding-top: auto;
   }
 }
 
@@ -547,7 +544,6 @@ section.fonctions {
 @media only screen and (min-width: 768px) {
   .menu {
     width: 95%;
-    padding: auto;
     margin-left: auto;
     margin-right: auto;
     box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.1);
@@ -589,12 +585,11 @@ section.fonctions {
   .menus {
     flex-direction: row;
     display: flex;
-    padding: auto;
     justify-content: center;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-device-width: 1370px) {
+@media only screen and (min-width: 768px) and (max-width: 1370px) {
   .menus {
     display: flex;
     flex-direction: column;
@@ -604,15 +599,19 @@ section.fonctions {
 }
 
 @media only screen and (min-width: 768px) {
-  .entree, .plats, .dessert {
+  .entree,
+  .plats,
+  .dessert {
     margin-left: 0.5rem;
     margin-right: 1rem;
     width: 80%;
   }
 }
 
-@media only screen and (min-width: 768px) and (min-width: 768px) and (max-device-width: 1370px) {
-  .entree, .plats, .dessert {
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-width: 1370px) {
+  .entree,
+  .plats,
+  .dessert {
     display: flex;
     flex-direction: column;
     justify-content: center;

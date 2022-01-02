@@ -22,7 +22,7 @@
   -o-animation: fadein 1s forwards; /* Opera < 12.1 */
   animation: fadein 1s forwards;
 
-  @media only screen and (min-width: 768px) and (max-device-width: 1370px) {
+  @media only screen and (min-width: 768px) and (max-width: 1370px) {
     width: 90%;
   }
 
@@ -66,7 +66,7 @@
     opacity: 0;
     animation: Animateback 1s;
     transition: 0.7s ease-in-out 0s;
-    transform: padding;
+ 
 
     i {
       transform: rotate(-360deg);
