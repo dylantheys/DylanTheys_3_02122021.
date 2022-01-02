@@ -29,14 +29,6 @@
   }
 }
 
-/* Firefox < 16 */
-
-/* Safari, Chrome and Opera > 12.1 */
-
-/* Internet Explorer */
-
-/* Opera < 12.1 */
-
 .foodcard:nth-child(1n) {
   animation-delay: 0.2s;
 }
@@ -51,10 +43,6 @@
 
 .foodcard:nth-child(4n) {
   animation-delay: 0.8s;
-}
-
-.foodcard:nth-child(5n) {
-  animation-delay: 1s;
 }
 
 html {
@@ -97,7 +85,7 @@ body {
   background: white;
   border-radius: 1em;
   cursor: pointer;
-  width: 22rem;
+  width: 97%;
   overflow: hidden;
   margin-bottom: 1rem;
   box-shadow: rgba(0, 0, 0, 0.123) 0px 0px 10px;
@@ -114,6 +102,12 @@ body {
   /* Internet Explorer */
   /* Opera < 12.1 */
   animation: fadein 1s forwards;
+}
+
+@media only screen and (min-width: 768px) and (max-device-width: 1370px) {
+  .foodcard {
+    width: 90%;
+  }
 }
 
 .foodcard h3,
@@ -263,6 +257,7 @@ body {
   border: #c6d6f0 solid 0px;
   text-decoration: none;
   color: black;
+  margin: 1rem;
 }
 
 .card .new {
@@ -453,21 +448,34 @@ section.restaurants {
   background-color: #f7f7f7;
 }
 
+@media only screen and (min-width: 768px) {
+  section.restaurants {
+    padding-top: 1rem;
+  }
+}
+
 section.restaurants h2 {
   margin-left: 1rem;
 }
 
 section.restaurants .restaurants_container {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  column-gap: 2rem;
-  row-gap: 1rem;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
 @media only screen and (min-width: 768px) {
   section.restaurants .restaurants_container {
     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-device-width: 1370px) {
+  section.restaurants .restaurants_container {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -548,14 +556,23 @@ section.fonctions {
 }
 
 .menu .btn-gradient {
-  margin: 2rem auto 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
 @media only screen and (min-width: 768px) {
   .menu .btn-gradient {
     margin: auto;
     width: 20rem;
-    margin-left: 35%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -572,7 +589,17 @@ section.fonctions {
   .menus {
     flex-direction: row;
     display: flex;
-    margin-left: 8%;
+    padding: auto;
+    justify-content: center;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-device-width: 1370px) {
+  .menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
   }
 }
 
@@ -580,5 +607,14 @@ section.fonctions {
   .entree, .plats, .dessert {
     margin-left: 0.5rem;
     margin-right: 1rem;
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (min-width: 768px) and (max-device-width: 1370px) {
+  .entree, .plats, .dessert {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
