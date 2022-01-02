@@ -16,10 +16,7 @@
   padding: 1em;
   height: 4.5rem;
   opacity: 0;
-  -webkit-animation: fadein 1s forwards; /* Safari, Chrome and Opera > 12.1 */
-  -moz-animation: fadein 1s forwards; /* Firefox < 16 */
-  -ms-animation: fadein 1s forwards; /* Internet Explorer */
-  -o-animation: fadein 1s forwards; /* Opera < 12.1 */
+  -webkit-animation: fadein 1s forwards; 
   animation: fadein 1s forwards;
 
   @media only screen and (min-width: 768px) and (max-width: 1370px) {

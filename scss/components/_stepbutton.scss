@@ -1,67 +1,61 @@
-.fonctions{
+.fonctions {
   margin-bottom: 4rem;
-  @media only screen and (min-width:768px) {
-
-}
-
-  & h2 {
-      margin-left: 2rem;
+  @media only screen and (min-width: 768px) {
   }
 
-  .function_btn{
-      margin: 0 1.5rem 0 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 3rem;
+  & h2 {
+    margin-left: 2rem;
+  }
 
-      @media only screen and (min-width:768px) {
-        flex-direction: row;
-        flex-wrap: nowrap;
+  .function_btn {
+    margin: 0 1.5rem 0 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    
 
-        
-    
-    
+    @media only screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: nowrap;
     }
-  
-      .step_card{
-          border-radius: 20px;
-          display: flex;
-          align-items: center;
-          position: relative;
-          z-index: auto;
-          width:40rem;
-          box-shadow: rgba(0, 0, 0, 0.123) 0px 0px 10px;
-          height: 5rem;
 
+    .step_card {
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: auto;
+      width: 40rem;
+      box-shadow: rgba(0, 0, 0, 0.123) 0px 0px 10px;
+      height: 5rem;
       
 
-          :first-child{
-            @include center;
-              background-color: #9356dc;
-              border-radius: 100%;
-              width: 1.5rem;
-              height: 1.5rem;
-              left: -0.8rem;
-              color: #fff;
-              font-size: 0.8rem;
-              margin-right: 1.1rem;
-              position: absolute;
-              z-index: 1;
-          }
-      
-          i{
-              color: $darkgrey;
-              padding: 3rem;
-              &:hover{
-                  color: #925ad6f3;
-              }
-          }
-      
-         
-          &:hover{
-              background-color:#c89bff2a;
-          }
+      :first-child {
+        @include center;
+        background-color: #9356dc;
+        border-radius: 100%;
+        width: 1.5rem;
+        height: 1.5rem;
+        left: -0.8rem;
+        color: #fff;
+        font-size: 0.8rem;
+        margin-right: 1.1rem;
+        position: absolute;
+        z-index: 1;
       }
+
+      i {
+        color: $darkgrey;
+        padding: 3rem;
+        &:hover {
+          color: #925ad6f3;
+        }
+      }
+
+      &:hover {
+        background-color: #c89bff2a;
+      }
+    }
   }
 }

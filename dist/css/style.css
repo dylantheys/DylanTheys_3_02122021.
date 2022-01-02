@@ -142,10 +142,6 @@ body {
   padding: 1em;
   height: 4.5rem;
   opacity: 0;
-  /* Safari, Chrome and Opera > 12.1 */
-  /* Firefox < 16 */
-  /* Internet Explorer */
-  /* Opera < 12.1 */
   animation: fadein 1s forwards;
 }
 
