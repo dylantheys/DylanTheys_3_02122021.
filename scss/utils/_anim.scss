@@ -40,18 +40,25 @@
  @keyframes loader {
   0% {
     transform: rotate(0deg);
+    opacity: 1;
   }
   100% {
     transform: rotate(360deg);
+    opacity: 0;
+    z-index: -100000000000;
+
  
   }
 }
 
 @keyframes loaderback {
-  
+  0% {
+    opacity: 1;
+   
+  }
   100% {
     opacity: 0;
-    z-index: -100000;
+    z-index: -1000000000;
  
   }
 }

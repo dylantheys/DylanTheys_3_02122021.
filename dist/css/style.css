@@ -48,16 +48,22 @@
 @keyframes loader {
   0% {
     transform: rotate(0deg);
+    opacity: 1;
   }
   100% {
     transform: rotate(360deg);
+    opacity: 0;
+    z-index: -100000000000;
   }
 }
 
 @keyframes loaderback {
+  0% {
+    opacity: 1;
+  }
   100% {
     opacity: 0;
-    z-index: -100000;
+    z-index: -1000000000;
   }
 }
 
@@ -83,7 +89,6 @@ body {
 
 .spinningloader {
   display: inline-block;
-  animation-delay: 1.75s;
   animation-fill-mode: both;
   z-index: 10000;
   display: flex;
@@ -95,7 +100,7 @@ body {
   left: 0;
   top: 0;
   background-color: rgba(255, 255, 255, 0.9);
-  animation: loaderback 1.2s linear 2s forwards;
+  animation: loaderback 4s linear 2s forwards;
 }
 
 .spinningloader:after {
@@ -107,7 +112,7 @@ body {
   border-radius: 50%;
   border: 6px solid #fff;
   border-color: #9356DC transparent #FF79DA transparent;
-  animation: loader 1.2s linear 0.01s infinite forwards;
+  animation: loader linear 2s forwards;
 }
 
 .btn-gradient {
@@ -120,6 +125,11 @@ body {
   border: none;
   box-shadow: rgba(0, 0, 0, 0.116) 0px 0px 10px 1px;
   transition: 0.6s;
+  cursor: pointer;
+}
+
+.btn-gradient:hover {
+  filter: brightness(150%);
 }
 
 .foodcard {
@@ -213,8 +223,6 @@ body {
 .foodcard:hover .checkbox {
   animation: Animate 1s forwards;
   -webkit-animation: Animate 1s forwards;
-  -moz-animation: Animate 1s forwards;
-  -o-animation: Animate 1s forwards;
   opacity: 1;
 }
 
